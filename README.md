@@ -11,5 +11,5 @@ The "sound()" function generates a tone based on the frequency value from the ar
 Note: This code assumes that the Ultrasonic sensor is connected to pin 7, and the speaker is connected to pin 3. If different pins are used, the code should be modified accordingly.
 
 
-** How to install a library from zip
+**How to install a library from zip**
 https://wiki.seeedstudio.com/How_to_install_Arduino_Library/
