@@ -9,3 +9,7 @@ The "loop()" function measures the distance with the Ultrasonic sensor and conve
 The "sound()" function generates a tone based on the frequency value from the array using the tone() function. The frequency is determined by the index passed in as an argument. The tone is played for 100 cycles, with each cycle consisting of a HIGH and LOW phase with a delay determined by the frequency.
 
 Note: This code assumes that the Ultrasonic sensor is connected to pin 7, and the speaker is connected to pin 3. If different pins are used, the code should be modified accordingly.
+
+
+** How to install a library from zip
+https://wiki.seeedstudio.com/How_to_install_Arduino_Library/
