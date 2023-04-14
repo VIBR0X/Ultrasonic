@@ -1,10 +1,11 @@
 # Ultrasonic
 
-This code defines a speaker pin using a macro definition (#define SPEAKER 3) and initializes it as an output pin in the 
-pinInit() function (pinMode(SPEAKER,OUTPUT)). The sound() function is used to play different bass notes defined in the 
-BassTab array. The loop in the loop() function plays each note in the BassTab array and waits for 500 milliseconds before
- moving on to the next note.
-The sound() function uses a loop to generate a square wave of the frequency corresponding to the current note by toggling
- the speaker pin on and off with a delay of half the period of the note. The period of each note is determined by its 
-frequency and is calculated as the reciprocal of the frequency. The delayMicroseconds() function is used to delay for a 
-given number of microseconds.
+This code utilizes the "Ultrasonic.h" library and an Ultrasonic sensor to measure distances in centimeters. The measured distance is then converted to an index, which is used to generate a tone. The code also includes an array of frequency values for the tones to be generated, as well as a speaker pin.
+
+The "setup()" function initializes the speaker pin as an output and sets it to low. Serial communication is also initiated at a baud rate of 9600.
+
+The "loop()" function measures the distance with the Ultrasonic sensor and converts it to an index. If the index is less than 36, the "sound()" function is called with the index as an argument. Otherwise, the speaker is turned off.
+
+The "sound()" function generates a tone based on the frequency value from the array using the tone() function. The frequency is determined by the index passed in as an argument. The tone is played for 100 cycles, with each cycle consisting of a HIGH and LOW phase with a delay determined by the frequency.
+
+Note: This code assumes that the Ultrasonic sensor is connected to pin 7, and the speaker is connected to pin 3. If different pins are used, the code should be modified accordingly.
